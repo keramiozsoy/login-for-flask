@@ -5,3 +5,6 @@ Login authentication for python web framework for Flask
 python welcome.py
 
 localhost:8888
+
+# Technologies
+- http://flask.pocoo.org
