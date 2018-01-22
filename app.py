@@ -1,15 +1,19 @@
 from flask import Flask
 from flask import render_template
+from flask import request
 
 app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return "index page!!"
+    return render_template('index.html')
 
-@app.route("/login")
+@app.route("/login",methods=['POST'])
 def login():
-    return render_template('login.html')
+    if  request.form['username'] == 'testuser' and request.form['password'] == 'pass' : 
+      return render_template('home.html')
+    else:
+      return index()
 
 @app.errorhandler(404)
 def page_not_found(e):
