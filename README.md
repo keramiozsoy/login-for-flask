@@ -1,5 +1,7 @@
 # login-for-flask
-Login autotantication for python web framework for Flask
+Login authentication for python web framework for Flask
 
 # Start Application
 python welcome.py
+
+localhost:8888
