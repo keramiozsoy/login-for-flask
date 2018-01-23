@@ -7,4 +7,4 @@ python app.py
 localhost:1111
 
 # Technologies
-- http://flask.pocoo.org
+- http://flask.pocoo.org  # Micro Web Framework
