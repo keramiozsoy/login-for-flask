@@ -11,7 +11,7 @@ __pycache__/
 env/
 build/
 develop-eggs/
-dist/
+#dist/ # we are using /static/ui/ for css,js,img @keramiozsoy
 downloads/
 eggs/
 .eggs/

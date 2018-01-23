@@ -10,14 +10,18 @@ def index():
 
 @app.route("/login",methods=['POST'])
 def login():
-    if  request.form['username'] == 'testuser' and request.form['password'] == 'pass' : 
+    if  request.form['username'] == 'test' and request.form['password'] == 'test' :
       return render_template('home.html')
     else:
       return index()
+
+@app.route("/template")
+def template():
+    return render_template('template.html')
 
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'), 404
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0',port=8888)
+    app.run(host='0.0.0.0',port=1111)
