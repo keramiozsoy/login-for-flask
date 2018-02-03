@@ -294,11 +294,15 @@ desired effect
 
     <!-- Main content -->
     <section class="content container-fluid">
-
+{% block pageHeader %}
+{% endblock %}
+{% block pageContent %}
       <!--------------------------
         | Your Page Content Here |
         -------------------------->
-
+{% endblock %}
+{% block pageFooter %}
+{% endblock %}
     </section>
     <!-- /.content -->
   </div>
