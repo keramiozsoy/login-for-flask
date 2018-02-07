@@ -15,3 +15,4 @@ FLASK_DEBUG=1 python app.py
 # Technologies
 - http://flask.pocoo.org  # Micro Web Framework
 - http://jinja.pocoo.org  # Template engine
+- http://werkzeug.pocoo.org # Web Server Gateway Interface(WSGI)
