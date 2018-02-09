@@ -6,11 +6,20 @@ Login authentication for python web framework for Flask
 - pip install Flask
 
 # Start Application
+Open console
 ```
-python app.py
+FLASK_DEBUG=1 python app.py
 
-localhost:1111
+127.0.0.1:1111
+```
+# Check Code Style
+Am i use right code style for python ? :)
+```
+pep8 --count --statistics --show-source app.py
+
+pylint app.py
 ```
 # Technologies
 - http://flask.pocoo.org  # Micro Web Framework
 - http://jinja.pocoo.org  # Template engine
+- http://werkzeug.pocoo.org # Web Server Gateway Interface(WSGI)
