@@ -2,7 +2,9 @@ from flask import Flask
 from flask import render_template
 from flask import request
 from flask import session
-from flask import flash
+from flask import redirect # I will learn after that will use
+from flask import url_for  # I will learn after that will use
+from flask import flash    # I will learn after that will use
 import os
 
 from peewee import *
@@ -23,12 +25,19 @@ def index():
 
 @app.route("/login",methods=['POST'])
 def login():
-    if  request.form['username'] == 'test' and request.form['password'] == 'test' :
-        session['logged_in'] = True
+    if  request.method == 'POST':
+        user_name = request.form['username']
+        sur_name = request.form['password']
+        login_user = Person.select().where(Person.name == user_name, Person.surname == sur_name)
+        if login_user.exists():
+            session['logged_in'] = True
+            session['username'] = user_name
+            session['password'] = sur_name
+            return render_template('home.html')
+        else:
+            return render_template('login.html')
     else:
-        flash('wrong password')
-
-    return index()
+        return render_template('login.html')
 
 #@app.route("/template")
 #def template():
@@ -52,7 +61,6 @@ class Person(Model):
         database = db
 
 
-		
 class Pet(Model):
     person = ForeignKeyField(Person, related_name='pets')
     petName = CharField()
@@ -65,16 +73,16 @@ db.connect()
 if not (
 	Person.table_exists() and Pet.table_exists()
 ):
-	db.create_tables([Person,Pet])
+	db.create_tables([Person,Pet], safe=True)
 
 
 testData = Person(name='Kerami',surname='Ozsoy',active=True)
 testData.save()
 
-testData2 = Person(name='TestName',surname='TestSur',active=False)
+testData2 = Person(name='test',surname='test',active=False)
 testData2.save()
 
-testData3 = Pet(person=testData,petName='kopek')
+testData3 = Pet(person=testData,petName='dog')
 testData3.save()
 
 db.close()
