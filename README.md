@@ -18,6 +18,8 @@ Am i use right code style for python ? :)
 pep8 --count --statistics --show-source app.py
 
 pylint app.py
+
+#flake8 I will add this linter
 ```
 # Technologies
 - http://flask.pocoo.org  # Micro Web Framework
