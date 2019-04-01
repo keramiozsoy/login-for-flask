@@ -1,5 +1,5 @@
 # login-for-flask
-Login authentication for python web framework for Flask
+Login authentication for Flask python web framework
 
 # Requirements 
 - Python 3.6.4
