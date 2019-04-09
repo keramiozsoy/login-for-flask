@@ -20,6 +20,7 @@ pep8 --count --statistics --show-source app.py
 pylint app.py
 
 #flake8 I will add this linter
+#http://flake8.pycqa.org/en/latest/
 ```
 # Technologies
 - http://flask.pocoo.org  # Micro Web Framework
