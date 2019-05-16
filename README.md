@@ -2,7 +2,7 @@
 Login authentication for Flask python web framework
 
 # Requirements 
-- Python 3.6.4
+- python 3.6.4
 - pip install Flask
 
 # Start Application
