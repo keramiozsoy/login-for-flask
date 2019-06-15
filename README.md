@@ -5,8 +5,8 @@ Login authentication for Flask python web framework
 - python 3.6.4
 - pip install Flask
 
-# Start Application
-Open console
+# Run Application
+Open terminal
 ```
 FLASK_DEBUG=1 python app.py
 
